@@ -1,6 +1,6 @@
 let movies;
 
-export default class MoviesDAO {
+class MoviesDAO {
   static async injectDB(conn) {
     if (movies) {
       return;
@@ -44,3 +44,5 @@ export default class MoviesDAO {
     }
   }
 }
+
+module.exports = MoviesDAO;
