@@ -1,7 +1,7 @@
-const MoviesDAO = require('./dao/moviesDAO.js');
+const MoviesDAO = require('../dao/moviesDAO');
 
 class MoviesController {
-  static async apiGetMovies(req, res, next) {
+  static async apiGetMovies(req, res) {
     const moviesPerPage = req.query.moviesPerPage
       ? parseInt(req.query.moviesPerPage, 10)
       : 20;

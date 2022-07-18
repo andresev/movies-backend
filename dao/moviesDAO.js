@@ -9,7 +9,7 @@ class MoviesDAO {
     try {
       movies = await conn.db(process.env.MOVIEWREVIEWS_NS).collection('movies');
     } catch (err) {
-      console.error('Unable to connect in MOviesDAO: ' + err);
+      console.error('Unable to connect in MoviesDAO: ' + err);
     }
   }
 
