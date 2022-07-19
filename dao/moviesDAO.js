@@ -35,7 +35,7 @@ class MoviesDAO {
         .skip(page * moviesPerPage);
 
       const moviesList = await cursor.toArray();
-      const totalNumMovies = movies.countDocuments(query);
+      const totalNumMovies = await movies.countDocuments(query);
 
       return { moviesList, totalNumMovies };
     } catch (err) {
