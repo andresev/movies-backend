@@ -1,4 +1,5 @@
 const MoviesDAO = require('./dao/moviesDAO.js');
+const ReviewsDAO = require('./dao/reviewsDAO.js');
 const app = require('./server.js');
 
 const mongodb = require('mongodb');
@@ -14,6 +15,7 @@ async function main() {
     //Connect to MongoDB cluster
     await client.connect();
     await MoviesDAO.injectDB(client);
+    await ReviewsDAO.injectDB(client);
 
     //run server
     app.listen(port, () => {

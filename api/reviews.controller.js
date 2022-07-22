@@ -54,6 +54,12 @@ class ReviewsController {
       return res.status(500).json({ error: e.message });
     }
   }
+
+  static async apiDeleteReview(req, res) {
+    try {
+      const reviewId = req.body.review_id;
+    } catch (e) {}
+  }
 }
 
 module.exports = ReviewsController;
